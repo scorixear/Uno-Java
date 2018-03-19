@@ -1,5 +1,5 @@
 package Game;
-public class Wild extends Card implements ActionCard, WildCard{
+public class Wild extends Card implements WildCard{				//implements ActionCard
 
 	public Wild(String color) {
 		super(13, "black");

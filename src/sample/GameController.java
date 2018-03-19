@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -25,6 +26,7 @@ public class GameController implements Initializable{                           
     @FXML public Label playerOne;                                               //Linker Spielername
     @FXML public Label playerTwo;                                               //mittler Spielername
     @FXML public Label playerThree;                                             //rechter Spielername
+    @FXML public Button drawButton;
 
 
 
@@ -56,4 +58,6 @@ public class GameController implements Initializable{                           
         cardLabel.setText("aktuelle Karten");
     }
 
+    public void drawCardAction(ActionEvent actionEvent) {
+    }
 }
