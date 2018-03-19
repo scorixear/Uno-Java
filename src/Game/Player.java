@@ -1,3 +1,4 @@
+package Game;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,7 +19,7 @@ public class Player {
 		deck.remove(card);
 		if(card instanceof WildCard) {
 			String s ="";
-			while(s!=null&&(s.equals("blau")||s.equals("rot")||s.equals("grün")||s.equals("gelb"))) {
+			while(s!=null&&(s.equals("blau")||s.equals("rot")||s.equals("grï¿½n")||s.equals("gelb"))) {
 				s=IO.readString().toLowerCase().trim();
 			}
 			card.setColor(s);

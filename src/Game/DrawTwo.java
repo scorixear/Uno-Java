@@ -1,4 +1,4 @@
-
+package Game;
 public class DrawTwo extends ActionCard{
 
 	public DrawTwo(String color) {

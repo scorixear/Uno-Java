@@ -1,4 +1,4 @@
-
+package Game;
 public class Wild extends Card implements ActionCard, WildCard{
 
 	public Wild(String color) {

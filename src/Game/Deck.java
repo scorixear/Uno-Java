@@ -1,3 +1,4 @@
+package Game;
 import java.util.ArrayList;
 public class Deck {
 	ArrayList<Card> myDeck=new ArrayList<Card>();
