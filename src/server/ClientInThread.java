@@ -27,7 +27,8 @@ public class ClientInThread extends Thread
             String commmand = clientIn.readLine();
             System.out.println("["+ LocalDate.now().format(DateTimeFormatter.ISO_TIME)+"] "+username+" command recieved");
         } catch (IOException e) {
-            System.out.println("["+LocalDate.now().format(DateTimeFormatter.ISO_TIME)+"] Insuffizient Commands recieved from ClientSide");
+            System.out.println("[" + LocalDate.now().format(DateTimeFormatter.ISO_TIME) + "] Insuffizient Commands recieved from ClientSide");
         }
+
     }
 }

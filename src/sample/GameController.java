@@ -58,6 +58,7 @@ public class GameController implements Initializable{                           
         cardLabel.setText("aktuelle Karten");
     }
 
-    public void drawCardAction(ActionEvent actionEvent) {
+    public void drawCardAction(ActionEvent actionEvent) {                       //Game-Mechanics hier rein.
+
     }
 }
