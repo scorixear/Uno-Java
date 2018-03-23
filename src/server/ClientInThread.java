@@ -26,24 +26,7 @@ public class ClientInThread extends Thread
             String username = clientIn.readLine();
             String commmand = clientIn.readLine();
             System.out.println("["+ LocalDate.now().format(DateTimeFormatter.ISO_TIME)+"] "+username+" command recieved");
-            //if not your turn
-                //disapprove to the player
 
-            //if your turn
-                //identify user
-
-                //lay Card Command
-                    //contact other Players
-                    //approve to the player
-
-                //draw Card Command
-                    //get Card from Deck
-                    //contact other players
-                    //approve to the Player
-
-                //Uno Command
-                    //contact other Players
-                    //approve to the Player
 
             //Left Game Command
                 //contact other Players
@@ -55,6 +38,24 @@ public class ClientInThread extends Thread
                     //send card and approval to Player
                 //else
                     //send disapproval
+            //if not your turn
+                //disapprove to the player
+
+            //if your turn
+                //identify user
+
+                //lay Card Command
+                     //contact other Players
+                    //approve to the player
+
+                //draw Card Command
+                     //get Card from Deck
+                    //contact other players
+                    //approve to the Player
+
+                //Uno Command
+                    //contact other Players
+                    //approve to the Player
         } catch (IOException e) {
             System.out.println("[" + LocalDate.now().format(DateTimeFormatter.ISO_TIME) + "] Insuffizient Commands recieved from ClientSide");
         }
