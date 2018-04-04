@@ -16,17 +16,21 @@ public class Controller {                                                   //Sc
 
 
     public void loginButtonAction() throws IOException {
+
         errorLabel.setStyle("");
         errorLabel.setText("");
         System.out.println("Login");
         Player user = Main.setUser(new Player(usernameInput.getText()));
+        //try Login
         if(Main.getPlayers().contains(user))                                //Überprüfung ob Username bereits vorhanden, falls ja
         {                                                                   //setzte Error-Message
+            //if disapproval show Error from Server to Client
             errorLabel.setText("This user is already online!");
             errorLabel.setStyle("-fx-background-color: #CC7766");
         }
         else if(!usernameInput.getText().equals(""))                        //falls nein (und username ist nicht ""
         {                                                                   //adde Spieler zur Serverliste
+            //setup Carddeck
             Main.addPlayer(user);
             Main.getLoginStage().close();
             Main m = new Main();

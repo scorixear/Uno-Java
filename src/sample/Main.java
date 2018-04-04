@@ -15,7 +15,7 @@ public class Main extends Application {
     private static Stage loginstage;                                                          //Einlog-Frame (Stage auf der die Einlog Scene gesetzt wird
     private static Stage gamestage;                                                           //Spiel-Frame
     private static Player user;                                                               //Aktueller Spieler
-    private static ArrayList<Player> players;                                                 //komplette Liste aller Online-Spieler
+    private static ArrayList<Player> players = new ArrayList<>();                                                 //komplette Liste aller Online-Spieler
 
     @Override
     public void start(Stage primaryStage) throws Exception{                                   //Aufsetzen des Login-Screens
@@ -55,6 +55,7 @@ public class Main extends Application {
         gamestage.setTitle("Uno - SEB");
         gamestage.setScene(new Scene(FXMLLoader.load(getClass().getResource("game.fxml")),800,600));
         gamestage.show();
+
     }
 
 }

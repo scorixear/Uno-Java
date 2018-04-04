@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -25,10 +26,12 @@ public class GameController implements Initializable{                           
     @FXML public Label playerOne;                                               //Linker Spielername
     @FXML public Label playerTwo;                                               //mittler Spielername
     @FXML public Label playerThree;                                             //rechter Spielername
+    @FXML public Button drawButton;
 
 
 
     public void logoutAction(){                                                 //Log den Spieler aus dem Spiel
+        //send Logout to Server
         ArrayList<Player> players = Main.getPlayers();
         System.out.println(players.size());
         if(players.contains(Main.getUser())){
@@ -39,11 +42,18 @@ public class GameController implements Initializable{                           
         }
     }
     public void playCardAction(){                                               //Game-Mechanics hier rein
+        //send LayCard to Server
+        //wait for approval
+        //if approved
+            //remove card from own deck
+        //if disapproved
+            //print error to user
 
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {            //setzt den Game-Frame auf, Orientierung zum Listener möglich
+
         usernameLabel.setText("Username: "+Main.getUser().getUsername());
         ArrayList<Player> players = (ArrayList<Player>)Main.getPlayers().clone();
         players.remove(Main.getUser());
@@ -56,4 +66,13 @@ public class GameController implements Initializable{                           
         cardLabel.setText("aktuelle Karten");
     }
 
+    public void drawCardAction(ActionEvent actionEvent) {                       //Game-Mechanics hier rein.
+        //draw Card to Server
+        //wait for approval and card
+        //if approved
+            //add card[s] to deck
+        //else
+            //print error to user
+
+    }
 }
